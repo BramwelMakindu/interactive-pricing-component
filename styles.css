@@ -1,0 +1,319 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Manrope', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: hsl(230, 100%, 99%);
+    background-image: url(images/bg-pattern.svg);
+    background-position: top;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.container{
+    width: 700px;
+}
+
+.top-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 200px;
+    background-image: url(images/pattern-circles.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.top-div h1{
+    color: hsl(227, 35%, 25%);
+    margin-bottom: 0.5rem;
+}
+
+p{
+    color: hsl(225, 20%, 60%);
+}
+
+.top-div p{
+    font-size: 16px;
+}
+
+.bottom-div{
+    width: 100%;
+    background-color: white;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.price-div{
+    width: 100%;
+}
+
+.price-div-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-views p{
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.pricing{
+    display: flex;
+    align-items: center;
+}
+
+.pricing h2{
+    color: hsl(227, 35%, 25%);
+    font-size: 30px;
+    margin-right: 5px;
+}
+
+.price{
+    color: hsl(227, 35%, 25%) !important;
+}
+
+.pricing span{
+    color: hsl(225, 20%, 60%);
+}
+
+.range{
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.slider{
+    width: 100%;
+    background: linear-gradient(to right,
+        hsl(174, 77%, 80%) 0%,
+        hsl(174, 77%, 80%) 50%,
+        hsl(224, 65%, 95%) 0%,
+        hsl(224, 65%, 95%) 100%
+    );
+    appearance: none;
+    height: 10px;
+    border-radius: 30px;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+} 
+
+.slider::-webkit-slider-thumb{
+    appearance: none;
+    width: 45px;
+    height: 45px;
+    border: 0;
+    border-radius: 50%;
+    background-color: hsl(174, 86%, 45%);
+    background-image: url(images/icon-slider.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.price-toggle{
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle{
+    width: 50px;
+    height: 25px;
+    border-radius: 30px;
+    position: relative;
+    margin: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: hsl(223, 50%, 87%);
+}
+
+.toggle:hover{
+    background-image: linear-gradient(to right, hsl(223, 50%, 87%), hsl(174, 86%, 45%));
+}
+
+.toggle-ball{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position: absolute;
+    left: 1px;
+    background-color: white;
+    transition: all .3s ease;
+}
+
+.toggle.active .toggle-ball{
+    transform: translateX(26px);
+}
+
+.discount{
+    margin-left: 0.5rem;
+    color: hsl(15, 100%, 70%);
+    padding: 0 10px;
+    background-color: hsl(14, 92%, 95%);
+    border-radius: 30px;
+}
+
+.details{
+    margin-top: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.details p img{
+    margin-right: 0.5rem;
+}
+
+.details p{
+    margin-bottom: 1rem;
+}
+
+.submit-btn{
+    width: 200px;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: hsl(227, 35%, 25%);
+    border: none;
+    font-size: 16px;
+    color: hsl(226, 100%, 87%);
+    outline: none;
+    cursor: pointer;
+    transition: all .2s ease;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.submit-btn:hover{
+    color: white;
+}
+
+.submit-btn:active{
+    opacity: .7;
+}
+
+footer{
+    margin-top: 1rem;
+}
+
+.attribution a{
+    color: hsl(227, 35%, 25%);
+}
+
+.attribution a:hover{
+    color: hsl(174, 86%, 45%);
+}
+
+
+/*------for small screen----*/
+
+@media screen and (max-width: 800px){
+    body{
+        height: auto;
+        background-size: 200%; 
+    }
+
+    .container{
+        width: 320px;
+    }
+
+    .top-div{
+        width: 100%;
+        padding: 20px;
+        height: 180px;
+    }
+
+    .top-div h1{
+        font-size: 22px;
+    }
+
+    .top-div p{
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .bottom-div{
+        padding: 20px;
+    }
+
+    .price-div{
+        display: grid;
+    }
+
+    .price-div-top{
+        display: block;
+        text-align: center;
+    }
+
+    .pricing{
+        justify-content: center;
+        margin-top: 2rem;
+    }
+
+    .page-views{
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    .price-toggle p{
+        font-size: 14px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .discount{
+        margin-left: 10px !important;
+    }
+
+    .discount-text{
+        display: none;
+    }
+
+    .details{
+        flex-direction: column;
+    }
+
+    .details-left{
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .attribution{
+        font-size: 12px;
+        padding-bottom: 2rem;
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
